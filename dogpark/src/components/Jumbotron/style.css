@@ -1,0 +1,8 @@
+.jumbotron {
+    /* background-image: url("../../images/home-bg.jpg"); */
+    margin-bottom: 50px;
+    background: no-repeat center center;
+    background-color: gray;
+    background-attachment: scroll;
+    position: relative;      
+}
