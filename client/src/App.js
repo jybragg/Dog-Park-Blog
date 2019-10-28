@@ -1,13 +1,13 @@
 import React from 'react';
 import Nav from "./components/Nav";
-// import Header from "./components/Header";
 import Jumbotron from "./components/Jumbotron";
-// import Footer from './components/Footer/Footer';
+import Footer from './components/Footer';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NotFound from './components/NotFound';
 import Home from './pages/Home';
-import HelloWorld from './components/Blog';
 import Login from './components/Login';
+import AddPost from "./pages/AddPost";
+import Account from "./pages/Account";
 
 function App() {
   return (
@@ -15,11 +15,14 @@ function App() {
       <Nav />
       <Jumbotron />
       <Switch>
-        <Route exact path="/" component={Login} />
+        <Route exact path="/" component={Home} />
         <Route path="/login" component={Login} />
-        <Route path="/helloworld" component={HelloWorld} />
+        <Route path="/addpost" component={AddPost} />
+        <Route path="/account" component={Account} />
+        <Route path="/delete" component={Account} />
         <Route component={NotFound} />
       </Switch>
+      <Footer />
     </Router>
   )
 }
