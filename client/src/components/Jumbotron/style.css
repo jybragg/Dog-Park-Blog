@@ -1,8 +1,5 @@
 .jumbotron {
-    /* background-image: url("../../images/home-bg.jpg"); */
-    margin-bottom: 50px;
-    background: no-repeat center center;
-    background-color: gray;
-    background-attachment: scroll;
-    position: relative;      
+    background-image: url("../../images/dog1.jpg"); 
+    background-repeat: no-repeat;
+    background-size: cover;
 }
