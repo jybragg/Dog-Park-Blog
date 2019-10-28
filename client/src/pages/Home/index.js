@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
-import BlogList from "../../components/BlogList"
+import BlogList from "../../components/BlogList";
+import Filter from "../../components/Filter";
+import "./style.css";
 
 class Home extends Component {
 
+
     render() {
-    return (
-        <div>
-            <h1>You are on the Home page</h1>
-            <BlogList />
-        </div>
-    )
+        return (
+            <div>
+                <Filter />
+                <br />
+                <BlogList />
+            </div>
+        )
     }
 }
 
