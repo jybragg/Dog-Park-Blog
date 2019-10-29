@@ -4,7 +4,7 @@ class AddPost extends React.Component {
     render() {
         return (
            
-            <div className="container" id="addPost-container">
+            <div className="container mt-3" id="addPost-container">
                 <div class="row">
                     <div class="col-md-5 offset-md-3">
                         <form id="cms">

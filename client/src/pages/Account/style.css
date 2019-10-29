@@ -1,0 +1,6 @@
+#accountJumbo {
+    background-image: url("../../images/balls.jpg"); 
+    background-size: cover; 
+    background-position: center center;
+    height: 100vh;
+}
