@@ -1,7 +1,27 @@
 .card {
-    width: 18rem;
+    background: rgb(212, 208, 208);
+}
+.listCard {
+    background: #fff;
+    border-radius: 2px;
+    height: 160px;
+    position: relative;
+    width: 300px;
+    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 2%;
 }
 
-/* #blogList {
-    background-image: url("../../images/falldog.jpg");
-} */
+.listCard > .img-container {
+    height: 100%;
+    overflow: hidden;
+    background: white;
+  }
+
+#listImg {
+    border-radius: 2px;
+    height: 160px;
+    position: relative;
+    width: 300px;
+  }

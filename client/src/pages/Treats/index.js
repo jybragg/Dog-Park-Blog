@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
 import BlogList from "../../components/BlogList";
-import Filter from "../../components/Filter";
-import Jumbotron from "../../components/Jumbotron";
 import "./style.css";
 
-class Home extends Component {
+class Treats extends Component {
 
     render() {
         return (
             <div>
-                <Jumbotron />
-                <Filter />
+                <div className="jumbotron justify-content-center img-fluid" id="treats-jumbo">
+                </div>
                 <br />
                 <BlogList />
             </div>
@@ -18,4 +16,4 @@ class Home extends Component {
     }
 }
 
-export default Home;
+export default Treats;
