@@ -8,6 +8,7 @@ import Login from './components/Login';
 import AddPost from "./pages/AddPost";
 import Account from "./pages/Account";
 import Treats from './pages/Treats';
+import Post from "./pages/Post";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/login" component={Login} />
         <Route path="/addpost" component={AddPost} />
         <Route path="/account" component={Account} />
+        <Route path="/post" component={Post} />
         <Route path="/treats" component={Treats} />
         {/* <Route path="/delete" component={Delete} /> */}
         <Route component={NotFound} />
