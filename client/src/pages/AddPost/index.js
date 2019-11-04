@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import Post from "../Post";
 
 class AddPost extends React.Component {
     constructor(props) {
@@ -20,15 +21,15 @@ class AddPost extends React.Component {
         e.preventDefault();
         console.log(this.state)
         // const response = axios.post('http://http://localhost:3000/addpost', { posted_data: 'example' });
-    //     console.log('👉 Returned data');
-    // } catch(e) {
-    //     console.log(`😱 Axios request failed: ${e}`);
-        return axios.post('http://localhost:3000/api/articles', {
-            title,
-            intro,
-            body,
-            conclusion,
-        });
+        //     console.log('👉 Returned data');
+        // } catch(e) {
+        //     console.log(`😱 Axios request failed: ${e}`);
+        // return axios.post('http://localhost:3000/api/articles', {
+        //     title,
+        //     intro,
+        //     body,
+        //     conclusion,
+        // });
     }
 
     //clear form afterwards
@@ -85,10 +86,16 @@ class AddPost extends React.Component {
                 </div>
 
                 <div className="row">
-                    <div className="col-md-5 offset-md-3">
-                        <div className="container" id="test-post"></div>
-                    </div>
+                   
+                        <div className="container blog-container" id="test-post">
+                            <Post 
+                            title={this.state.title}
+                            intro={this.state.intro}
+                            />
+                        </div>
+                   
                 </div>
+
             </div>
         )
     }
