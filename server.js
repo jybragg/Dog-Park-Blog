@@ -24,6 +24,8 @@ if (process.env.NODE_ENV === "production") {
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/dogblog")
 .then(() => console.log("MongoDB is connected..."));
 
+// Add models
+require('./models/Articles');
 
 // Start the API server
 app.listen(PORT, function() {

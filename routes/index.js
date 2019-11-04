@@ -7,3 +7,10 @@ module.exports = (app) => {
     require(`./api/${file.substr(0, file.indexOf('.'))}`)(app);
   });
 };
+
+// const express = require('express');
+// const router = express.Router();
+
+// router.use('/api', require('./api'));
+
+// module.exports = router;

@@ -1,29 +1,92 @@
 import React from 'react';
+import axios from 'axios';
 
 class AddPost extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            title: '',
+            intro: '',
+            body: '',
+            conclusion: ''
+        }
+        this.handleChangeField = this.handleChangeField.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleSubmit(e) {
+        const { title, intro, body, conclusion } = this.state;
+        e.preventDefault();
+        console.log(this.state)
+        // const response = axios.post('http://http://localhost:3000/addpost', { posted_data: 'example' });
+    //     console.log('👉 Returned data');
+    // } catch(e) {
+    //     console.log(`😱 Axios request failed: ${e}`);
+        return axios.post('http://localhost:3000/api/articles', {
+            title,
+            intro,
+            body,
+            conclusion,
+        });
+    }
+
+    //clear form afterwards
+
+    handleChangeField(key, event) {
+        this.setState({
+            [key]: event.target.value,
+        });
+    }
+
     render() {
+        const { title, intro, body, conclusion } = this.state;
         return (
-           
+
             <div className="container mt-3" id="addPost-container">
-                <div class="row">
-                    <div class="col-md-5 offset-md-3">
+                <div className="row">
+                    <div className="col-md-5 offset-md-3">
                         <form id="cms">
-                            <div class="form-group">
+                            <div className="form-group">
                                 <label for="title">Post Title</label>
-                                <input type="text" class="form-control" id="title" />
-                                <label for="title">image url:</label>
-                                <input type="text" class="form-control" id="postImage-url" />
+                                <input
+                                    onChange={(ev) => this.handleChangeField('title', ev)}
+                                    value={title}
+                                    className="form-control my-3"
+                                    placeholder="Article Title" />
+                                {/* <label for="title">image url:</label>
+                                <input type="text" class="form-control" id="postImage-url" /> */}
                                 <br />
-                                <label for="body">Intro:</label>
-                                <textarea class="form-control" rows="5" id="post-intro"></textarea>
+                                <label for="intro">Intro:</label>
+                                <textarea
+                                    onChange={(ev) => this.handleChangeField('intro', ev)}
+                                    className="form-control my-3"
+                                    placeholder="Article Intro"
+                                    value={intro}></textarea>
+
                                 <label for="body">Body:</label>
-                                <textarea class="form-control" rows="5" id="post-body"></textarea>
-                                <label for="body">Conclusion:</label>
-                                <textarea class="form-control" rows="5" id="post-conclusion"></textarea>
+                                <textarea
+                                    onChange={(ev) => this.handleChangeField('body', ev)}
+                                    className="form-control my-3"
+                                    placeholder="Article Body"
+                                    value={body}></textarea>
+
+                                <label for="conclusion">Conclusion:</label>
+                                <textarea onChange={(ev) => this.handleChangeField('conclusion', ev)}
+                                    className="form-control my-3"
+                                    placeholder="Article Conclusion"
+                                    value={conclusion}></textarea>
+
                                 <br />
-                                <button type="submit" class="btn btn-success submit btn-lg">Submit</button>
+                                <button onClick={this.handleSubmit} type="submit" className="btn btn-success submit btn-lg">Submit</button>
                             </div>
                         </form>
+                    </div>
+                </div>
+
+                <div className="row">
+                    <div className="col-md-5 offset-md-3">
+                        <div className="container" id="test-post"></div>
                     </div>
                 </div>
             </div>

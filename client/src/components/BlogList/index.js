@@ -15,34 +15,34 @@ class BlogList extends React.Component {
           <div class="card-header border-0">
             <img id="listImg" src={require("../../images/pug.jpg")} alt="post pic" />
           </div>
-          <div class="card-block px-2">
-            <h4 class="card-title">Post Title</h4>
-            <p class="card-text">Post Description</p>
+          <div className="card-block px-2">
+            <h4 className="card-title">Post Title</h4>
+            <p className="card-text">Post Description</p>
             <a href="#" class="btn btn-primary">View Post</a>
           </div>
-          <div class="w-100"></div>
-          <div class="card-footer w-100 text-muted">
+          <div className="w-100"></div>
+          <div className="card-footer w-100 text-muted">
             FOOTER
         </div>
         </div>
         <br />
-        <div class="card flex-row flex-wrap">
-          <div class="card-header border-0">
+        <div className="card flex-row flex-wrap">
+          <div className="card-header border-0">
             <img id="listImg" src={require("../../images/dog1.jpg")} alt="post pic" />
           </div>
-          <div class="card-block px-2">
-            <h4 class="card-title">Post Title</h4>
-            <p class="card-text">Post Description</p>
+          <div className="card-block px-2">
+            <h4 className="card-title">Post Title</h4>
+            <p className="card-text">Post Description</p>
             <a href="#" class="btn btn-primary">View Post</a>
           </div>
-          <div class="w-100"></div>
-          <div class="card-footer w-100 text-muted">
+          <div className="w-100"></div>
+          <div className="card-footer w-100 text-muted">
             FOOTER
         </div>
         </div>
         <br />
-        <div class="card flex-row flex-wrap">
-          <div class="card-header border-0">
+        <div className="card flex-row flex-wrap">
+          <div className="card-header border-0">
             <img id="listImg" src={require("../../images/falldog.jpg")} alt="post pic" />
           </div>
           <div class="card-block px-2">
