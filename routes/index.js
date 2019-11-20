@@ -1,16 +1,19 @@
-const fs = require('fs');
-const path = require('path');
+// const fs = require('fs');
+// const path = require('path');
 
-module.exports = (app) => {
-  // API routes
-  fs.readdirSync(__dirname + '/api/').forEach((file) => {
-    require(`./api/${file.substr(0, file.indexOf('.'))}`)(app);
-  });
-};
+// module.exports = (app) => {
+//   // API routes
+//   fs.readdirSync(__dirname + '/api/').forEach((file) => {
+//     require(`./api/${file.substr(0, file.indexOf('.'))}`)(app);
+//   });
+// };
 
-// const express = require('express');
-// const router = express.Router();
+//=============================================================//
+//lightblog version
 
-// router.use('/api', require('./api'));
+const express = require('express');
+const router = express.Router();
 
-// module.exports = router;
+router.use('/api', require('./api'));
+
+module.exports = router;
